@@ -1,0 +1,21 @@
+apply plugin: "scala"
+
+group "com.github.grzegorzwitkowski"
+
+version "1.0-SNAPSHOT"
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:2.11.8"
+    compile "org.apache.spark:spark-core_2.11:1.6.2"
+    compile "org.elasticsearch:elasticsearch-spark-1.2_2.11:2.4.0"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.1"
+}
